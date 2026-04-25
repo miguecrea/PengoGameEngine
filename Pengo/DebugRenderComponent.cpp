@@ -45,9 +45,6 @@ dae::MapComponent::MapComponent(std::shared_ptr<dae::GameObject> Player,const st
 				DiamondBlockRenderer->SetTexture("MIGUEL_Diamonds.png");
 				DiamondBlockRenderer->AddToVector(1, 2,1, 1, dae::AnimationComponent::Type::StartAtNoZero, 0, 0);
 				DiamondBlockRenderer->AddToVector(1, 2,1, 1, dae::AnimationComponent::Type::StartAtNoZero, 1, 0);
-				//DiamondBlockRenderer->AddToVector(1, 2, 1, 0, dae::AnimationComponent::Type::loop, 0, 1);
-
-
 				auto TileComponent = std::make_shared<dae::TileComponent>();
 				auto RectComponent = std::make_shared<dae::RectangleComponent>(48,48);
 				auto TagComponent = std::make_shared<dae::TagComponent>(CUBE);
@@ -148,15 +145,6 @@ void dae::MapComponent::BeginPlay()
 
 void dae::MapComponent::Render()
 {
-
-
-	for (size_t Y = 0; Y < m_NumberTilesY; Y++)
-	{
-		for (size_t X = 0; X < m_NumberTilesX; X++)
-		{
-			//Renderer::GetInstance().DrawSquare(0.f + m_TileSize * X, 0.f + m_TileSize * Y, m_TileSize, SDL_Color{ 255,255,255,250 });
-		}
-	}
 }
 
 void dae::MapComponent::Update()

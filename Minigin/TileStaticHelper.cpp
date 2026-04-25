@@ -4,7 +4,6 @@
 
 int dae::TileStaticHelper::GetRow(float YPos)
 {
-
 	return static_cast<int>(std::floor(YPos / m_tileSize));
 }
 

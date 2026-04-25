@@ -38,9 +38,7 @@ dae::AIComponent::AIComponent(std::shared_ptr<GameObject> Map, std::shared_ptr<G
 
 void dae::AIComponent::BeginPlay()
 {
-
 	m_Self = this->GetOwner();
-
 	m_mapComponent = m_Map->GetComponent<dae::MapComponent>();
 	m_mapComponent->m_On3TilesMatched.Add(std::bind(&AIComponent::StunEnemy, this));
 
@@ -251,6 +249,9 @@ std::vector<Node> dae::AIComponent::aStar(Node agent, Node dest)
 
 void dae::AIComponent::StunEnemy()
 {
+	// When the FSM owns this enemy, leave stun handling to the StunnedState.
+	if (m_isFSMControlled) return;
+
 	s_PauseEnemy = true;
 	m_startTimer = true;
 	m_renderComponent->m_state = 1;
@@ -324,11 +325,10 @@ void dae::AIComponent::Render()
 
 void dae::AIComponent::Update()
 {
-
 	if (m_dead) return;
 
-
-
+	// When the FSM owns this enemy, the FSM drives behaviour every tick.
+	if (m_isFSMControlled) return;
 
 	if (m_startTimer)
 	{
@@ -340,51 +340,39 @@ void dae::AIComponent::Update()
 			m_startTimer = false;
 			s_PauseEnemy = false;
 			m_renderComponent->m_state = 0;
-
 		}
-
 	}
 
+	if (s_PauseEnemy) return;
 
-	if (s_PauseEnemy)return;
+	PerformChaseStep(m_pSceneManager->GetDeltaTime());
+}
+
+void dae::AIComponent::PerformChaseStep(float deltaTime)
+{
+	if (!m_Self || !m_Target) return;
 
 	Node currentPos;
-	//  //column 1
-
 	currentPos.x = int(m_Self->GetWorldPosition().x) / X_STEP;
 	currentPos.y = int(m_Self->GetWorldPosition().y) / Y_STEP;
 
-	//row 
-
-
 	Node targetPos;
-
-	//column
 	targetPos.x = int(m_Target->GetWorldPosition().x) / X_STEP;
 	targetPos.y = int(m_Target->GetWorldPosition().y) / Y_STEP;
-	//row
 
-	//int columns = 15;
-	//int rows = 17;
-	//
 	m_usablePath = aStar(currentPos, targetPos);
-
 
 	if (m_usablePath.size() > 1)
 	{
-
 		glm::vec2 targetNode =
 		{
 			float(m_usablePath[1].x * X_STEP),
 			float(m_usablePath[1].y * Y_STEP)
 		};
 
-
 		glm::vec2 currentPosLocation = m_Self->GetLocalPosition();
-
 		glm::vec2 toTarget = targetNode - currentPosLocation;
 		float distance = glm::length(toTarget);
-
 
 		const float snapThreshold = 0.05f;
 
@@ -394,9 +382,8 @@ void dae::AIComponent::Update()
 		}
 		else
 		{
-			// Move toward the target node
 			glm::vec2 moveDir = toTarget / distance;
-			float speed = m_Speed * m_pSceneManager->GetDeltaTime();
+			float speed = m_Speed * deltaTime;
 			glm::vec2 moveVec = moveDir * speed;
 
 			m_Self->SetPosition(
@@ -404,10 +391,7 @@ void dae::AIComponent::Update()
 				currentPosLocation.y + moveVec.y
 			);
 		}
-
 	}
-
-
 }
 
 float dae::AIComponent::distanceBetweenPoints()

@@ -2,6 +2,7 @@
 #include"GameObject.h"
 #include"TileComponent.h"
 #include"AiComponent.h"
+#include"EnemyFSMComponent.h"
 #include"CollisionWithComponent.h"
 #include"CollsionResponse.h"
 #include"AnimationComponent.h"
@@ -12,6 +13,7 @@
 #include"staticHeader.h"
 #include"TagComponent.h"
 #include"Tags.h"
+#include"IEnemyState.h"
 
 dae::EnemySpawner::EnemySpawner(std::vector<std::shared_ptr<dae::GameObject>> Tiles, std::shared_ptr<dae::GameObject > Map, std::shared_ptr<dae::GameObject> Pengo, const std::string fileName):
 	m_Tiles{Tiles},m_Map{Map},m_Pengo{Pengo},m_fileName{fileName}
@@ -57,6 +59,7 @@ void dae::EnemySpawner::SpawEnemy(float x, float y)
 	auto Enemy = std::make_shared<dae::GameObject>();
 	auto EnemyRenderer = std::make_shared<dae::RenderComponent>(-2, true);
 	auto EnemyAi = std::make_shared<dae::AIComponent>(m_Map,m_Pengo);
+	auto EnemyFSM = std::make_shared<dae::EnemyFSMComponent>(m_Map);
 	auto EnemyRectComponent = std::make_shared<dae::RectangleComponent>(30, 30);
 	auto CollisionComponentEnmies = std::make_shared<dae::CollisionWithComponent>(m_Tiles);
 	auto CollisionResponseEnemy = std::make_shared<dae::CollsionResponse>();
@@ -67,6 +70,7 @@ void dae::EnemySpawner::SpawEnemy(float x, float y)
 	EnemyRenderer->SetDimension(2.5f);
 	Enemy->AddComponent(EnemyRenderer);
 	Enemy->AddComponent(EnemyAi);
+	Enemy->AddComponent(EnemyFSM);   // Drives behaviour via the state machine
 	Enemy->AddComponent(EnemyRectComponent);
 	Enemy->AddComponent(CollisionComponentEnmies);
 	Enemy->AddComponent(CollisionResponseEnemy);

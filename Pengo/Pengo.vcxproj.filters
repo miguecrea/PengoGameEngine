@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="IEnemyState.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyFSMComponent.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyStates.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeSelectionCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeModeCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakMoveTileCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionWithComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CurseQbertComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DisplayNameComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugRenderComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyJumpComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpAnimationComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="HighScoreComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LivesComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyBoardComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeFallComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AiComponent.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveGridCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="NextSceneCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="restartGameCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenLevelCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Value1DCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Value2DCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="LockInCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatingCharacterMoveComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PengoComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TagComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SkipLevelsCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="SetPositionCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdatePositionCommand.cpp">
+      <Filter>Components\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="StartInfoComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatorComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TileComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerAndInputComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManagerComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CollsionResponse.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AddInput.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="PengoDirection.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Tags.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="TagManager.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySpawner.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="IEnemyState.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyFSMComponent.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyStates.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeModeCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeSelectionCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakMoveTileCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CurseQbertComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugRenderComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayNameComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyJumpComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AiComponent.h">
+      <Filter>AStarPathdinding</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScoreComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpAnimationComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LivesComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBoardComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeFallComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveGridCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="NextSceneCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="restartGameCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenLevelCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Value1DCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Value2DCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="LockInCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatingCharacterMoveComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PengoComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TagComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SetPositionCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="SkipLevelsCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdatePositionCommand.h">
+      <Filter>Components\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatorComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="StartInfoComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TileComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerAndInputComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManagerComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CollsionResponse.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AddInput.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="PengoDirection.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="QbertDirection.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMode.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="TileInfo.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tags.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="TagManager.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="stringAndScoresVariables.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeOfAi.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySpawner.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="State">
+      <UniqueIdentifier>{f6b2978f-83a4-41f7-bfdf-c9381c8a021a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{b6e5629d-3312-4d16-ac37-8b82136756c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AStarPathdinding">
+      <UniqueIdentifier>{67455556-98fb-4c1b-b125-286b9129d02b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Commands">
+      <UniqueIdentifier>{2ce1ec9e-7f8b-4af1-bf4d-17be53aa19e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{e5a00b57-347c-488c-b29b-e4fdac92cf7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

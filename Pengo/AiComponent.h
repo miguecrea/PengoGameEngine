@@ -35,6 +35,16 @@ namespace dae
 		virtual void Render() override;
 		virtual void Update() override;
 		bool m_dead = false;
+
+		// Hooks used by the enemy FSM. When m_isFSMControlled is true,
+		// AIComponent::Update() is a no-op and the FSM drives behaviour
+		// by calling PerformChaseStep() / accessing the helpers below.
+		void SetFSMControlled(bool v) { m_isFSMControlled = v; }
+		void PerformChaseStep(float deltaTime);
+
+		std::shared_ptr<MapComponent> GetMapComponent() const { return m_mapComponent; }
+		std::shared_ptr<RenderComponent> GetRenderComponent() const { return m_renderComponent; }
+
 	private:
 		std::shared_ptr<GameObject> m_Map = nullptr;
 		std::shared_ptr<GameObject> m_Target = nullptr;
@@ -42,6 +52,7 @@ namespace dae
 		std::shared_ptr<RenderComponent> m_renderComponent;
 		dae::GameObject * m_Self = nullptr;
 		float m_Speed;
+		bool m_isFSMControlled = false;
 
 		float distanceBetweenPoints();
 

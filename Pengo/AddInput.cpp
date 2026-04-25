@@ -38,8 +38,6 @@ void AddControllerKeyboardPlayer1(std::shared_ptr<dae::GameObject>& Qbert, std::
 	pMoveCommand = { std::make_unique<dae::SetPositionCommand>(Qbert.get(), direction,QbertRenderer,static_cast<int>(QBertDirection::RIGHT_DOWN)) };
 	controller->MapCommandToButton(dae::Controller::ControllerButtons::ButtonA, std::move(pMoveCommand), dae::ButtonState::Down);
 
-
-
 	auto keyboard{ input.GetKeyboard() };   //second uses keyboard 
 
 

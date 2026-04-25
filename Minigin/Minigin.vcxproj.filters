@@ -33,9 +33,6 @@
     <Filter Include="Engine Files\MainFiles">
       <UniqueIdentifier>{af3bdd13-5aab-415d-b912-665f855915ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game Files\GameObjects">
-      <UniqueIdentifier>{c9b1459b-c664-4bb3-8c46-9e4998ee4223}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Map">
       <UniqueIdentifier>{57b6ff21-1764-42f3-b885-face8063448c}</UniqueIdentifier>
     </Filter>
@@ -44,6 +41,15 @@
     </Filter>
     <Filter Include="SoundSystem\logging">
       <UniqueIdentifier>{f62082ef-2abf-47ae-838a-1ed74dda5dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\GameObject">
+      <UniqueIdentifier>{496ba6b1-2392-47cd-9e9a-190bca86c825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Transform">
+      <UniqueIdentifier>{377494bd-ec62-4ac8-952a-84467469b89b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Files\Commands">
+      <UniqueIdentifier>{42410a42-37f2-4853-b504-0e205842148d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +92,6 @@
     <ClInclude Include="imstb_textedit.h">
       <Filter>Engine Files\Rendering\ImGui Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Game Files</Filter>
-    </ClInclude>
     <ClInclude Include="GraphComponent.h">
       <Filter>Game Files\Components</Filter>
     </ClInclude>
@@ -106,9 +109,6 @@
     </ClInclude>
     <ClInclude Include="Texture2D.h">
       <Filter>Engine Files\Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Game Files</Filter>
     </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>Engine Files\Rendering</Filter>
@@ -194,6 +194,12 @@
     <ClInclude Include="TileStaticHelper.h">
       <Filter>Other Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Game Files\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Game Files\Transform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RenderComponent.cpp">
@@ -229,9 +235,6 @@
     <ClCompile Include="imgui_widgets.cpp">
       <Filter>Engine Files\Rendering\ImGui Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Game Files</Filter>
-    </ClCompile>
     <ClCompile Include="GraphComponent.cpp">
       <Filter>Game Files\Components</Filter>
     </ClCompile>
@@ -252,9 +255,6 @@
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>Engine Files\Rendering</Filter>
-    </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>Engine Files\Scene</Filter>
@@ -316,20 +316,26 @@
     <ClCompile Include="DelegateBase.cpp">
       <Filter>Engine Files</Filter>
     </ClCompile>
-    <ClCompile Include="Command1D.cpp">
-      <Filter>Engine Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Command2D.cpp">
-      <Filter>Engine Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveLevelComponent.cpp">
-      <Filter>Engine Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestCommand.cpp">
-      <Filter>Engine Files</Filter>
-    </ClCompile>
     <ClCompile Include="TileStaticHelper.cpp">
       <Filter>Engine Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Game Files\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Game Files\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Command2D.cpp">
+      <Filter>Engine Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Command1D.cpp">
+      <Filter>Engine Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCommand.cpp">
+      <Filter>Engine Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveLevelComponent.cpp">
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
